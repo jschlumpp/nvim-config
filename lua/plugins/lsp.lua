@@ -34,6 +34,7 @@ local configs = {
         cmd = { "vscode-html-languageserver" }
     },
     nixd = {},
+    tinymist = { },
     rust_analyzer = {
         flags = {
             allow_incremental_sync = true,
