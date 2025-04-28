@@ -58,6 +58,23 @@ return {
         dependencies = { 'junegunn/fzf' },
     },
     {
+        'y3owk1n/time-machine.nvim',
+        cmd = {
+            "TimeMachineToggle",
+            "TimeMachinePurgeBuffer",
+            "TimeMachinePurgeAll",
+            "TimeMachineLogShow",
+            "TimeMachineLogClear",
+        },
+        keys = {
+            { '<leader>tU', function() require 'time-machine'.actions.toggle() end, { silent = true }, desc = 'time-machine' },
+        },
+        ---@module 'time-machine'
+        ---@type TimeMachine.Config
+        opts = {
+            diff_tool = "difft",
+        },
+    },
         'MagicDuck/grug-far.nvim',
         main = 'grug-far',
         cmd = { 'GrugFar' },
