@@ -75,6 +75,16 @@ return {
             diff_tool = "difft",
         },
     },
+    {
+        'fredeeb/tardis.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        cmd = {
+            "Tardis",
+        },
+        opts = {
+        },
+    },
+    {
         'MagicDuck/grug-far.nvim',
         main = 'grug-far',
         cmd = { 'GrugFar' },
