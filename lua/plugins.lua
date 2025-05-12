@@ -16,11 +16,6 @@ return {
     'ray-x/aurora',
     {
         'folke/tokyonight.nvim',
-        lazy = false,
-        priority = 1000,
-        config = function(_, _)
-            vim.cmd.colorscheme('tokyonight-night')
-        end,
     },
     {
         'projekt0n/github-nvim-theme',
@@ -35,6 +30,11 @@ return {
     {
         dependencies = { 'rktjmp/lush.nvim'},
         'metalelf0/jellybeans-nvim',
+        lazy = false,
+        priority = 1000,
+        config = function(_, _)
+            vim.cmd.colorscheme('jellybeans-nvim')
+        end,
     },
     {
         'tpope/vim-sleuth',
