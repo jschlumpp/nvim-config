@@ -32,6 +32,7 @@
   "lush.nvim": { "branch": "main", "commit": "45a79ec4acb5af783a6a29673a999ce37f00497e" },
   "middleclass": { "branch": "master", "commit": "9fab4d5bca67262614960960ca35c4740eb2be2c" },
   "mini.files": { "branch": "main", "commit": "432142ada983ec5863ba480f0e4891b7d64ce3f6" },
+  "mini.snippets": { "branch": "main", "commit": "d005684e620e76eb2a5fbbbd211a1eba7212b4aa" },
   "mini.trailspace": { "branch": "main", "commit": "39a0460c025a605519fdd6bea1ce870642429996" },
   "nightfox.nvim": { "branch": "main", "commit": "ba47d4b4c5ec308718641ba7402c143836f35aa9" },
   "nvim-autopairs": { "branch": "master", "commit": "4d74e75913832866aa7de35e4202463ddf6efd1b" },

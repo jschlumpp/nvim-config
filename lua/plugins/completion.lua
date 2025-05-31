@@ -15,28 +15,45 @@ for _, cmd in ipairs(commands) do
     end
 end
 
-return { {
-    'saghen/blink.cmp',
-    event = "VeryLazy",
-    version = version,
-    build = build_cmd,
-    dependencies = { 'rafamadriz/friendly-snippets' },
-    ---@module 'blink.cmp'
-    ---@type blink.cmp.Config
-    opts = {
-        keymap = { preset = 'default' },
-        appearance = {
-            use_nvim_cmp_as_default = true,
-        },
-        sources = {
-            default = { 'lsp', 'path', 'snippets', 'buffer' },
-        },
-        signature = {
-            enabled = true,
-            window = {
-                show_documentation = false,
+return {
+    {
+        'saghen/blink.cmp',
+        event = "VeryLazy",
+        version = version,
+        build = build_cmd,
+        dependencies = { 'echasnovski/mini.snippets' },
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
+        opts = {
+            keymap = { preset = 'default' },
+            appearance = {
+                use_nvim_cmp_as_default = true,
+            },
+            snippets = {
+                preset = 'mini_snippets',
+            },
+            sources = {
+                default = { 'lsp', 'path', 'snippets', 'buffer' },
+            },
+            signature = {
+                enabled = true,
+                window = {
+                    show_documentation = false,
+                },
             },
         },
+        opts_extend = { 'sources.default' },
     },
-    opts_extend = { 'sources.default' },
-} }
+    {
+        'echasnovski/mini.snippets',
+        dependencies = { 'rafamadriz/friendly-snippets' },
+        opts = function(_)
+            local gen_loader = require 'mini.snippets'.gen_loader
+            return {
+                snippets = {
+                    gen_loader.from_lang(),
+                },
+            }
+        end,
+    },
+}
