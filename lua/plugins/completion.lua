@@ -15,39 +15,28 @@ for _, cmd in ipairs(commands) do
     end
 end
 
-return {
-    {
-        "L3MON4D3/LuaSnip",
-        version = 'v2.*',
-        dependencies = { "rafamadriz/friendly-snippets" },
-        config = function(_, opts)
-            require("luasnip.loaders.from_vscode").lazy_load()
-        end,
-    },
-    {
-        'saghen/blink.cmp',
-        event = "VeryLazy",
-        version = version,
-        build = build_cmd,
-        dependencies = { 'L3MON4D3/LuaSnip' },
-        ---@module 'blink.cmp'
-        ---@type blink.cmp.Config
-        opts = {
-            keymap = { preset = 'default' },
-            appearance = {
-                use_nvim_cmp_as_default = true,
-            },
-            snippets = { preset = 'luasnip' },
-            sources = {
-                default = { 'lsp', 'path', 'snippets', 'buffer' },
-            },
-            signature = {
-                enabled = true,
-                window = {
-                    show_documentation = false,
-                },
+return { {
+    'saghen/blink.cmp',
+    event = "VeryLazy",
+    version = version,
+    build = build_cmd,
+    dependencies = { 'rafamadriz/friendly-snippets' },
+    ---@module 'blink.cmp'
+    ---@type blink.cmp.Config
+    opts = {
+        keymap = { preset = 'default' },
+        appearance = {
+            use_nvim_cmp_as_default = true,
+        },
+        sources = {
+            default = { 'lsp', 'path', 'snippets', 'buffer' },
+        },
+        signature = {
+            enabled = true,
+            window = {
+                show_documentation = false,
             },
         },
-        opts_extend = { 'sources.default' },
-    }
-}
+    },
+    opts_extend = { 'sources.default' },
+} }
