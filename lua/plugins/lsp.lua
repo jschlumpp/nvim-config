@@ -48,6 +48,7 @@ return {{
         },
         lua_ls = { },
         zls = { },
+        dockerls = { },
         html = {
             cmd = {"vscode-html-languageserver"}
         },
