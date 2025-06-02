@@ -36,22 +36,15 @@ return {{
         jsonls = { },
         yamlls = { },
         ts_ls = { },
-        ltex = {
+        harper_ls = {
             settings = {
-                ltex = {
-                    language = "en-US",
-                    checkFrequency = "save",
+                ['harper-ls'] = {
+                    linters = {
+                        SentenceCapitalization = false,
+                        SpellCheck = false,
+                    },
                 },
             },
-            flags = {
-                debounce_text_changes = 9000,
-            },
-            after = function (_, _)
-                require("ltex_extra").setup {
-                    load_langs = { "en-US", "de-DE" },
-                    init_check = true,
-                }
-            end,
         },
         lua_ls = { },
         zls = { },

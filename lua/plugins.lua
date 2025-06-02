@@ -161,9 +161,6 @@ return {
         ft = { 'just', 'Justfile' },
     },
     {
-        'barreiroleo/ltex_extra.nvim',
-    },
-    {
         'lervag/vimtex',
         ft = 'tex',
         config = function(plugin)
