@@ -26,7 +26,7 @@ return {
             { "<leader>qh", "<cmd>FzfLua quickfix_stack<cr>", desc = "list-history" },
             { "<leader>qn", "<cmd>cnewer<cr>", desc = "newer-list" },
             { "<leader>qp", "<cmd>colder<cr>", desc = "older-list" },
-            { "<leader>qq", "<cmd>copen<cr>", desc = "open" },
+            { "<leader>qq", "<cmd>botright copen<cr>", desc = "open" },
             { "<leader>s", group = "search" },
             { "<leader>t", group = "options" },
             { "<leader>tu", "<cmd>UndotreeToggle<cr>", desc = "undo-tree" },
