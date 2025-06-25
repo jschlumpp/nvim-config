@@ -255,6 +255,11 @@ return {
             { '<leader>gG', '<cmd>Git<cr>', { silent = true }, desc = 'fugitive' },
         }
     },
+    {
+        'sindrets/diffview.nvim',
+        cmd = { 'DiffviewOpen', 'DiffviewFileHistory' },
+        opts = {},
+    },
     -- {
     --     'kdheepak/lazygit.nvim',
     --     cmd = {
