@@ -56,4 +56,14 @@ return {
             }
         end,
     },
+    {
+        'chrisgrieser/nvim-scissors',
+        opts = {
+            snippetDir = vim.fn.stdpath('config') .. '/snippets',
+        },
+        keys = {
+            { '<leader>css', function() require 'scissors'.addNewSnippet() end, mode = {'n', 'x'}, desc = 'snippet-add' },
+            { '<leader>cse', function() require 'scissors'.editSnippet() end, desc = 'snippet-edit' },
+        },
+    }
 }

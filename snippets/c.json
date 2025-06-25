@@ -1,0 +1,1 @@
+{"iohandler":{"body":["static void ${1:handler_fn}(struct ukp_io_ring *ring, struct ukp_io_task *base, struct ukp_io_task_ctx *ctx)","{","\tstruct ${2:task_struct} *task = (struct ${2} *)base;","","\t${0:}","}"],"prefix":"iohandler"},"ioparam":{"body":"struct ukp_io_ring *ring, struct ukp_io_task *task","prefix":"prt"}}
