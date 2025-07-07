@@ -18,7 +18,6 @@ return {
             { "<leader>c", group = "code" },
             { "<leader>f", group = "files" },
             { "<leader>fS", "<cmd>wall<cr>", desc = "write-all-file" },
-            { "<leader>ff", function() require 'mini.files'.open(vim.api.nvim_buf_get_name(0)) end, desc = "file-explorer" },
             { "<leader>fs", "<cmd>write<cr>", desc = "write-file" },
             { "<leader>g", group = "git" },
             { "<leader>q", group = "quickfix" },

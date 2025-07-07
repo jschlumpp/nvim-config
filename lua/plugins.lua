@@ -548,7 +548,9 @@ return {
         'echasnovski/mini.files',
         version = false,
         keys = {
-            { '<M-o>', function() require 'mini.files'.open(vim.api.nvim_buf_get_name(0)) end, mode = { 'n', 't' }, desc = 'open file', noremap = true, silent = true }
+            { '<M-o>', function() require 'mini.files'.open() end, mode = { 'n', 't' }, desc = 'open file', noremap = true, silent = true },
+            { "<leader>ff", function() require 'mini.files'.open() end, desc = "file-explorer" },
+            { "<leader>fF", function() require 'mini.files'.open(vim.api.nvim_buf_get_name(0)) end, desc = "file-explorer-here" },
         },
         opts = {
             options = {
