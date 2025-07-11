@@ -65,7 +65,8 @@ return {{
                     assist = {
                         importMergeBehaviour = "module",
                     },
-                    checkOnSave = {
+                    checkOnSave = true,
+                    check = {
                         command = "clippy",
                     },
                     completion = {
