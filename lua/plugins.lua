@@ -458,7 +458,7 @@ return {
                 enabled = true,
             },
             quickfile = {
-                enabled = true,
+                enabled = false,
             },
             statuscolumn = {
                 enabled = true,
