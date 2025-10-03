@@ -76,9 +76,9 @@ function M.make_on_attach(config)
         buf_set_keymap('n', '<M-CR>', '<cmd>FzfLua lsp_code_actions<CR>')
         buf_set_keymap('v', '<M-CR>', vim.lsp.buf.code_action)
         buf_set_keymap('n', ']g',
-            function() vim.diagnostic.goto_next({ float = true, popup_opts = { border = "single" } }) end)
+            function() vim.diagnostic.jump({ count = 1, float = true, popup_opts = { border = "single" } }) end)
         buf_set_keymap('n', '[g',
-            function() vim.diagnostic.goto_prev({ float = true, popup_opts = { border = "single" } }) end)
+            function() vim.diagnostic.jump({ count = -1, float = true, popup_opts = { border = "single" } }) end)
 
         buf_set_keymap('n', '<leader>e',
             function() vim.diagnostic.open_float({ bufnr = 0, scope = "line", popup_opts = { border = "single" } }) end)
