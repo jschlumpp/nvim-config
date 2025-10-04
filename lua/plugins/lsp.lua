@@ -121,6 +121,12 @@ return {
                     buf_set_keymap('n', 'gri', Snacks.picker.lsp_implementations, { desc = "lsp-implementations" })
                     buf_set_keymap('n', 'grt', Snacks.picker.lsp_type_definitions, { desc = "lsp-type-definitions" })
                     buf_set_keymap('n', 'grr', Snacks.picker.lsp_references, { desc = "lsp-references" })
+                    -- buf_set_keymap('n', 'gd', Snacks.picker.lsp_definitions, { desc = "lsp-definitions" })
+                    -- buf_set_keymap('n', 'gD', Snacks.picker.lsp_declarations, { desc = "lsp-declarations" })
+                    -- buf_set_keymap('n', 'gi', Snacks.picker.lsp_implementations, { desc = "lsp-implementations" })
+                    -- buf_set_keymap('n', 'gy', Snacks.picker.lsp_type_definitions, { desc = "lsp-type-definitions" })
+                    -- buf_set_keymap('n', 'gr', Snacks.picker.lsp_references, { desc = "lsp-references" })
+
 
                     buf_set_keymap('n', '<leader>co', vim.lsp.buf.outgoing_calls)
                     buf_set_keymap('n', '<leader>ci', vim.lsp.buf.incoming_calls)

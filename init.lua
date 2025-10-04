@@ -160,6 +160,13 @@ vim.diagnostic.config({
     underline = true,
     virtual_lines = { current_line = true },
 })
+vim.keymap.set('n', '<leader>E', function () vim.diagnostic.setqflist() end, { silent = true, noremap = true })
+-- buf_set_keymap('n', ']g',
+--     function() vim.diagnostic.jump({ count = 1, float = true, popup_opts = { border = "single" } }) end)
+-- buf_set_keymap('n', '[g',
+--     function() vim.diagnostic.jump({ count = -1, float = true, popup_opts = { border = "single" } }) end)
+-- buf_set_keymap('n', '<leader>e',
+--     function() vim.diagnostic.open_float({ bufnr = 0, scope = "line", popup_opts = { border = "single" } }) end)
 
 local function paste()
   return {
