@@ -26,6 +26,7 @@ local parsers_requested = {
     go = {},
     gosum = {},
     gomod = {},
+    toml = {},
     python = {},
     comment = {},
     dockerfile = {},
