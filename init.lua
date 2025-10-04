@@ -71,6 +71,19 @@ require("lazy").setup("plugins", {
     defaults = {
         lazy = true,
     },
+    performance = {
+        rtp = {
+            disabled_plugins = {
+                'gzip',
+                'netrwPlugin',
+                'rplugin',
+                'tarPlugin',
+                'tohtml',
+                'tutor',
+                'zipPlugin',
+            },
+        },
+    },
     dev = {
         path = vim.fn.stdpath('config') .. '/local_plugins',
     },
