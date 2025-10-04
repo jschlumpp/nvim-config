@@ -143,7 +143,6 @@ return {
                     actions = true,
                     hover = true,
                     completion = true,
-                    on_attach = require 'lsp-utils'.make_on_attach({})
                 },
             }
         end,
