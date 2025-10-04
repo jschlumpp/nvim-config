@@ -28,7 +28,7 @@ return {
         'nyoom-engineering/oxocarbon.nvim'
     },
     {
-        dependencies = { 'rktjmp/lush.nvim'},
+        dependencies = { 'rktjmp/lush.nvim' },
         'metalelf0/jellybeans-nvim',
         lazy = false,
         priority = 1000,
@@ -185,6 +185,12 @@ return {
     {
         'dstein64/vim-startuptime',
         cmd = 'StartupTime',
+    },
+    {
+        'chrisgrieser/nvim-recorder',
+        opts = {
+            slots = { 'a', 'b', 'c' },
+        },
     },
     {
         'Bekaboo/deadcolumn.nvim',
@@ -424,7 +430,7 @@ return {
                     {
                         section = 'terminal',
                         title = 'Git status',
-                        enabled = function () return Snacks.git.get_root() ~= nil end,
+                        enabled = function() return Snacks.git.get_root() ~= nil end,
                         cmd = 'git diff --stat -B -M -C',
                         padding = 2,
                         height = 8,
@@ -547,8 +553,8 @@ return {
         'echasnovski/mini.files',
         version = false,
         keys = {
-            { '<M-o>', function() require 'mini.files'.open() end, mode = { 'n', 't' }, desc = 'open file', noremap = true, silent = true },
-            { "<leader>ff", function() require 'mini.files'.open() end, desc = "file-explorer" },
+            { '<M-o>',      function() require 'mini.files'.open() end,                             mode = { 'n', 't' },        desc = 'open file', noremap = true, silent = true },
+            { "<leader>ff", function() require 'mini.files'.open() end,                             desc = "file-explorer" },
             { "<leader>fF", function() require 'mini.files'.open(vim.api.nvim_buf_get_name(0)) end, desc = "file-explorer-here" },
         },
         opts = {
@@ -565,7 +571,7 @@ return {
         'echasnovski/mini.trailspace',
         event = 'VeryLazy',
         version = false,
-        opts = { },
+        opts = {},
     },
     {
         'olimorris/persisted.nvim',

@@ -16,18 +16,18 @@ return {
                 icons_enabled = true,
             },
             sections = {
-                lualine_b = { 'branch', 'diff' } ,
+                lualine_b = { 'branch', 'diff' },
                 lualine_c = {
                     'filename',
                     {
                         'diagnostics',
-                        sources = {'nvim_diagnostic'}
+                        sources = { 'nvim_diagnostic' }
                     },
                 },
                 lualine_x = {
                     'encoding',
                     'fileformat',
-                    function ()
+                    function()
                         -- Use bo.filetype directly because the lualine filetype
                         -- handles a unloaded web-devicons package very poorly (it
                         -- searches for the package using `require` *every* redraw,
@@ -36,6 +36,14 @@ return {
                         return vim.bo.filetype or ''
                     end,
                 },
+                lualine_y = {
+                    'progress',
+                    { require 'recorder'.displaySlots },
+                },
+                lualine_z = {
+                    { require 'recorder'.recordingStatus },
+                    'location',
+                }
             },
         }
     end,
