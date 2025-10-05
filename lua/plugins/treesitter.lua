@@ -85,9 +85,6 @@ return {
 
                     local filetype = args.match
                     local lang = vim.treesitter.language.get_lang(filetype)
-                    if parsers_requested[lang] == nil then
-                        return
-                    end
                     if lang == nil or not vim.treesitter.language.add(lang) then
                         return
                     end
