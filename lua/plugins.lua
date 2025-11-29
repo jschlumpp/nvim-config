@@ -536,6 +536,16 @@ return {
                     Snacks.toggle.dim():map('<leader>tD')
                 end,
             })
+
+            vim.keymap.set('n', 'gj', function ()
+                Snacks.terminal.toggle({ 'jjui' }, {
+                    interactive = true,
+                    win = {
+                        border = 'rounded',
+                        title = 'jjui',
+                    }
+                })
+            end, { silent = true, noremap = true })
         end,
     },
     {
