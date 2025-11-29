@@ -641,7 +641,20 @@ return {
         opts = {
             fast_wrap = {},
             disable_filetype = { 'uiua' },
+            check_ts = true,
         },
+        config = function(plugin, opts)
+            local npairs = require 'nvim-autopairs'
+            npairs.setup(opts)
+
+            local Rule = require'nvim-autopairs.rule'
+            local ts_conds = require 'nvim-autopairs.ts-conds'
+
+            npairs.add_rules({
+                Rule('=', ';', 'nix')
+                    :with_pair(ts_conds.is_not_ts_node('binding_set'))
+            })
+        end,
     },
     {
         'gbprod/yanky.nvim',
