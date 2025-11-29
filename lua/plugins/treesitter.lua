@@ -16,6 +16,7 @@ local parsers_requested = {
     vim = {},
     vimdoc = {},
     json = {},
+    zig = {},
     nix = {},
     jq = {},
     awk = {},
