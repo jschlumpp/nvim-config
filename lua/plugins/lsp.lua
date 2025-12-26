@@ -13,7 +13,7 @@ local configs = {
     },
     uiua = {},
     gopls = {},
-    pyright = {},
+    ty = {},
     jsonls = {},
     yamlls = {},
     ts_ls = {},
