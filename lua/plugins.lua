@@ -547,7 +547,7 @@ return {
                 end,
             })
 
-            vim.keymap.set('n', 'gj', function ()
+            vim.keymap.set('n', '<leader>gj', function ()
                 Snacks.terminal.toggle({ 'jjui' }, {
                     interactive = true,
                     win = {
