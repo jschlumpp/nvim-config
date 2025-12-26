@@ -148,6 +148,10 @@ return {
         end,
     },
     {
+        'Apeiros-46B/uiua.vim',
+        ft = 'uiua',
+    },
+    {
         'LnL7/vim-nix',
         ft = 'nix',
     },
@@ -636,6 +640,7 @@ return {
         event = { 'InsertEnter' },
         opts = {
             fast_wrap = {},
+            disable_filetype = { 'uiua' },
         },
     },
     {

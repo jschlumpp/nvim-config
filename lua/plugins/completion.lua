@@ -29,6 +29,13 @@ return {
             appearance = {
                 use_nvim_cmp_as_default = true,
             },
+            completion = {
+                accept = {
+                    auto_brackets = {
+                        blocked_filetypes = { 'uiua' },
+                    },
+                },
+            },
             snippets = {
                 preset = 'mini_snippets',
             },

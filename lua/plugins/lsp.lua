@@ -11,6 +11,7 @@ local configs = {
         },
         cmd = { "clangd", "--log=error", "--background-index", "--clang-tidy" },
     },
+    uiua = {},
     gopls = {},
     pyright = {},
     jsonls = {},
