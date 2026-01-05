@@ -547,7 +547,7 @@ return {
                 end,
             })
 
-            vim.keymap.set('n', '<leader>gj', function ()
+            vim.keymap.set('n', '<leader>gj', function()
                 Snacks.terminal.toggle({ 'jjui' }, {
                     interactive = true,
                     win = {
@@ -647,7 +647,7 @@ return {
             local npairs = require 'nvim-autopairs'
             npairs.setup(opts)
 
-            local Rule = require'nvim-autopairs.rule'
+            local Rule = require 'nvim-autopairs.rule'
             local ts_conds = require 'nvim-autopairs.ts-conds'
 
             npairs.add_rules({
