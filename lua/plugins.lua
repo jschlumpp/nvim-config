@@ -597,15 +597,7 @@ return {
         'olimorris/persisted.nvim',
         event = 'BufReadPre',
         cmd = {
-            'SessionToggle',
-            'SessionStart',
-            'SessionStop',
-            'SessionSave',
-            'SessionSelect',
-            'SessionLoad',
-            'SessionLoadLast',
-            'SessionLoadFromFile',
-            'SessionDelete',
+            'Persisted',
         },
         keys = {
             { "<leader>xs", function() require('persisted').load() end,                desc = 'restore-session' },
