@@ -44,10 +44,8 @@ return {
                 },
                 lualine_y = {
                     'progress',
-                    { require 'recorder'.displaySlots },
                 },
                 lualine_z = {
-                    { require 'recorder'.recordingStatus },
                     'location',
                 }
             },

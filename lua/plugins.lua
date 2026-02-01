@@ -205,12 +205,6 @@ return {
         cmd = 'StartupTime',
     },
     {
-        'chrisgrieser/nvim-recorder',
-        opts = {
-            slots = { 'a', 'b', 'c' },
-        },
-    },
-    {
         'Bekaboo/deadcolumn.nvim',
         event = 'VeryLazy',
         opts = {
