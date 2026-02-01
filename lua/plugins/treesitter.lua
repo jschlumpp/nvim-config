@@ -121,4 +121,11 @@ return {
             separator = "─",
         },
     },
+    {
+        'gsuuon/tshjkl.nvim',
+        keys = {
+            "<M-v>"
+        },
+        config = true
+    },
 }
