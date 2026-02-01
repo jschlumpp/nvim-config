@@ -17,6 +17,7 @@ local configs = {
     jsonls = {},
     yamlls = {},
     ts_ls = {},
+    org = {},
     harper_ls = {
         settings = {
             ['harper-ls'] = {

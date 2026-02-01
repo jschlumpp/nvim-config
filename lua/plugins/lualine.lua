@@ -16,7 +16,13 @@ return {
                 icons_enabled = true,
             },
             sections = {
-                lualine_b = { 'branch', 'diff' },
+                lualine_b = {
+                    'branch',
+                    'diff',
+                    function ()
+                        return (orgmode and orgmode.statusline())
+                    end
+                },
                 lualine_c = {
                     'filename',
                     {
