@@ -303,20 +303,22 @@ return {
     {
         'kylechui/nvim-surround',
         event = "VeryLazy",
-        opts = {
-            keymaps = {
-                insert          = '<C-g>z',
-                insert_line     = '<C-g>Z',
-                normal          = 'gz',
-                normal_cur      = 'gZ',
-                normal_line     = 'gzgz',
-                normal_cur_line = 'gZgZ',
-                visual          = 'gz',
-                visual_line     = 'gZ',
-                delete          = 'gzd',
-                change          = 'gzc',
-            },
+        keys = {
+            { "<C-g>z", "<Plug>(nvim-surround-insert)",          { mode = "i", desc = "Add a surrounding pair around the cursor (insert mode)" } },
+            { "<C-g>Z", "<Plug>(nvim-surround-insert-line)",     { mode = "i", desc = "Add a surrounding pair around the cursor, on new lines (insert mode)" } },
+            { "gz",     "<Plug>(nvim-surround-normal)",          { mode = "n", desc = "Add a surrounding pair around a motion (normal mode)" } },
+            { "gZ",     "<Plug>(nvim-surround-normal-cur)",      { mode = "n", desc = "Add a surrounding pair around the current line (normal mode)" } },
+            { "gzgz",   "<Plug>(nvim-surround-normal-line)",     { mode = "n", desc = "Add a surrounding pair around a motion, on new lines (normal mode)" } },
+            { "gZgZ",   "<Plug>(nvim-surround-normal-cur-line)", { mode = "n", desc = "Add a surrounding pair around the current line, on new lines (normal mode)" } },
+            { "gz",     "<Plug>(nvim-surround-visual)",          { mode = "x", desc = "Add a surrounding pair around a visual selection" } },
+            { "gZ",     "<Plug>(nvim-surround-visual-line)",     { mode = "x", desc = "Add a surrounding pair around a visual selection, on new lines" } },
+            { "gzd",    "<Plug>(nvim-surround-delete)",          { mode = "n", desc = "Delete a surrounding pair" } },
+            { "gzc",    "<Plug>(nvim-surround-change)",          { mode = "n", desc = "Change a surrounding pair" } },
+            { "gZc",    "<Plug>(nvim-surround-change-line)",     { mode = "n", desc = "Change a surrounding pair, putting replacements on new lines" } },
         },
+        init = function()
+            vim.g.nvim_surround_no_normal_mappings = true
+        end,
     },
     {
         'cbochs/portal.nvim',
