@@ -1,16 +1,15 @@
 local commands = {
-    { 'nix',   'nix run .#build-plugin', nil },
-    { 'cargo', 'cargo build --release',  nil },
+    { 'nix',   'nix run .#build-plugin' },
+    { 'cargo', 'cargo build --release' },
 }
 
 -- Use an released version with binaries if no build tools are available
-local version = '*' ---@type string?
+local version = '1.*' ---@type string?
 local build_cmd ---@type string?
 
 for _, cmd in ipairs(commands) do
     if vim.fn.executable(cmd[1]) == 1 then
         build_cmd = cmd[2]
-        version = cmd[3]
         break
     end
 end
