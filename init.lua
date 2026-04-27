@@ -171,7 +171,7 @@ vim.diagnostic.config({
     signs = true,
     update_in_insert = false,
     underline = true,
-    virtual_lines = { current_line = true },
+    virtual_text = { virt_text_pos = 'eol_right_align' },
 })
 
 local function paste()
