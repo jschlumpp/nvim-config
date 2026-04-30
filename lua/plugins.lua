@@ -123,6 +123,23 @@ return {
         end,
     },
     {
+        "mason-org/mason.nvim",
+        cmd = {
+            'Mason',
+            'MasonUpdate',
+            'MasonInstall',
+            'MasonUninstall',
+            'MasonUninstallAll',
+            'MasonLog',
+        },
+        opts = {
+            registries = {
+                'github:mason-org/mason-registry',
+                'github:Crashdummyy/mason-registry',
+            },
+        }
+    },
+    {
         'cespare/vim-toml',
         ft = 'toml',
     },
