@@ -62,7 +62,7 @@ return {
         main = 'grug-far',
         cmd = { 'GrugFar' },
         keys = {
-            { '<leader>sR', function() require 'grug-far'.open {} end, { silent = true }, desc = 'grug-far' },
+            { '<leader>sR', function() require 'grug-far'.open {} end, mode = {'n', 'x' }, silent = true, desc = 'grug-far' },
         },
         opts = {
         }
