@@ -37,6 +37,19 @@ return {
         end,
     },
     {
+        'dstein64/nvim-scrollview',
+        event = 'VeryLazy',
+        opts = {
+            signs_on_startup = { 'diagnostics', 'marks', 'search', 'cursor' },
+            diagnostics_severities = { vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN, vim.diagnostic.severity.INFO },
+            signs_scrollbar_overlap = "off",
+        },
+        config = function(plugin, opts)
+            require 'scrollview'.setup(opts)
+            require('scrollview.contrib.gitsigns').setup()
+        end,
+    },
+    {
         'tpope/vim-sleuth',
         event = 'BufReadPre',
     },
