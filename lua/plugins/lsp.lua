@@ -36,7 +36,7 @@ local configs = {
         cmd = { "vscode-html-languageserver" }
     },
     nixd = {},
-    tinymist = { },
+    tinymist = {},
     rust_analyzer = {
         flags = {
             allow_incremental_sync = true,
@@ -73,7 +73,7 @@ local configs = {
 return {
     {
         'j-hui/fidget.nvim',
-        opts = { },
+        opts = {},
     },
     {
         'neovim/nvim-lspconfig',
@@ -109,6 +109,7 @@ return {
             vim.api.nvim_create_autocmd('LspAttach', {
                 group = lsp_group,
                 callback = function(args)
+                    local bufnr = args.buf
                     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
                     ---@param mode string|string[]
@@ -116,7 +117,7 @@ return {
                     ---@param rhs string|function
                     ---@param opts? vim.keymap.set.Opts
                     local function buf_set_keymap(mode, lhs, rhs, opts)
-                        local default_opts = { noremap = true, silent = true, buffer = args.buf }
+                        local default_opts = { noremap = true, silent = true, buffer = bufnr }
                         vim.keymap.set(mode, lhs, rhs, vim.tbl_extend('force', default_opts, opts or {}))
                     end
 
@@ -138,13 +139,13 @@ return {
 
                     if client:supports_method('textDocument/documentHighlight') then
                         vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-                            buffer = args.buf,
+                            buffer = bufnr,
                             callback = function()
                                 vim.lsp.buf.document_highlight()
                             end
                         })
                         vim.api.nvim_create_autocmd('CursorMoved', {
-                            buffer = args.buf,
+                            buffer = bufnr,
                             callback = function()
                                 vim.lsp.buf.clear_references()
                             end
@@ -152,7 +153,7 @@ return {
                     end
 
                     if client:supports_method('textDocument/inlayHint') then
-                        vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
+                        vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
                     end
                 end
             })
