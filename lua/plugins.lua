@@ -88,13 +88,6 @@ return {
         end,
     },
     {
-        'nyngwang/NeoZoom.lua',
-        keys = {
-            { '<leader>z', function() require 'neo-zoom'.neo_zoom({}) end, { silent = true }, desc = 'zoom-window' },
-        },
-        opts = {},
-    },
-    {
         'folke/twilight.nvim',
         cmd = { 'Twilight', 'TwilightEnable', 'TwilightEnable' },
         opts = {},
@@ -201,13 +194,6 @@ return {
         ft = { 'just', 'Justfile' },
     },
     {
-        'lervag/vimtex',
-        ft = 'tex',
-        config = function(plugin)
-            vim.g.tex_flavor = 'latex'
-        end,
-    },
-    {
         'chomosuke/typst-preview.nvim',
         ft = 'typst',
         version = '1.*',
@@ -232,10 +218,6 @@ return {
     {
         'bakpakin/fennel.vim',
         ft = 'fnl',
-    },
-    {
-        'ahf/cocci-syntax',
-        ft = 'cocci',
     },
     {
         'dstein64/vim-startuptime',
@@ -310,26 +292,15 @@ return {
         }
     },
     {
-        'sindrets/diffview.nvim',
-        cmd = { 'DiffviewOpen', 'DiffviewFileHistory' },
-        opts = {},
+        'dlyongemallo/diffview.nvim',
+        cmd = { 'DiffviewOpen', 'DiffviewFileHistory', 'DiffviewDiffFiles', "DiffviewToggle" },
+        ---@module 'diffview.config'
+        ---@type DiffviewConfig.user
+        opts = {
+            use_icons = true,
+            preferred_adapter = "jj",
+        },
     },
-    -- {
-    --     'kdheepak/lazygit.nvim',
-    --     cmd = {
-    --         'LazyGit',
-    --         'LazyGitConfig',
-    --         'LazyGitFilter',
-    --         'LazyGitCurrentFile',
-    --         'LazyGitFilterCurrentFile',
-    --     },
-    --     keys = {
-    --         { '<leader>gg', '<cmd>LazyGit<cr>', { silent = true }, desc = 'lazy-git' },
-    --     },
-    --     dependencies = {
-    --         'nvim-lua/plenary.nvim',
-    --     },
-    -- },
     {
         'numToStr/Comment.nvim',
         event = "BufRead",
@@ -659,7 +630,7 @@ return {
         event = 'VimEnter',
     },
     {
-        'mschlumpp/quick-switch.nvim',
+        'jschlumpp/quick-switch.nvim',
         -- The plugin needs to keep track of buffers even if the keybind wasn't
         -- used yet.
         event = 'VeryLazy',
@@ -702,14 +673,6 @@ return {
             { '<m-p>', '<cmd>YankyRingHistory<cr>' },
         },
     },
-    -- {
-    --     'rcarriga/nvim-notify',
-    --     event = 'VeryLazy',
-    --     opts = {},
-    --     init = function(plugins, opts)
-    --         vim.notify = require 'notify'
-    --     end,
-    -- },
     {
         'lambdalisue/suda.vim',
         cmd = { 'SudaRead', 'SudaWrite' },
@@ -734,16 +697,6 @@ return {
             { 'g<c-a>', 'g<Plug>(dial-increment)', { noremap = true }, mode = { 'v' },         desc = 'dial increment' },
             { 'g<c-x>', 'g<Plug>(dial-decrement)', { noremap = true }, mode = { 'v' },         desc = 'dial decrement' },
         },
-    },
-    {
-        'skywind3000/asyncrun.vim',
-        dependencies = {
-            { 'skywind3000/asynctasks.vim' }
-        },
-        cmd = { 'AsyncRun' },
-        config = function(plugin)
-            vim.g.asyncrun_open = 8
-        end,
     },
     {
         't-troebst/perfanno.nvim',
