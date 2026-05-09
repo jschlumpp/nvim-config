@@ -61,6 +61,7 @@
   "quick-switch.nvim": { "branch": "main", "commit": "e87328358f59b32dba6da2f1fdbbe70b37054ced" },
   "quicker.nvim": { "branch": "master", "commit": "063cc44da1eef8681bbd653b29d3bc961780886a" },
   "rainglow": { "branch": "master", "commit": "837fd7292274e0ee2f3b5aee4519c3f74d7dc3d1" },
+  "roslyn.nvim": { "branch": "main", "commit": "b62d1a588765f0aa1b46ed260252c9e456408835" },
   "rust.vim": { "branch": "master", "commit": "889b9a7515db477f4cb6808bef1769e53493c578" },
   "snacks.nvim": { "branch": "main", "commit": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e" },
   "stickybuf.nvim": { "branch": "master", "commit": "0c1e5f1a3eb36eea2cea57083828269cc62c58e4" },

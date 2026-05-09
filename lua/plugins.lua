@@ -140,6 +140,13 @@ return {
         }
     },
     {
+        "seblyng/roslyn.nvim",
+        ---@module 'roslyn.config'
+        ---@type RoslynNvimConfig
+        opts = {
+        },
+    },
+    {
         'cespare/vim-toml',
         ft = 'toml',
     },
