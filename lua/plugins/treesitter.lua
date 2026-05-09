@@ -3,7 +3,7 @@ return {
         'arborist-ts/arborist.nvim',
         opts = {
             concurrency = 8,
-            install_popular = false,
+            install_popular = true,
             ensure_installed = {
                 'c',
                 'cpp',
