@@ -4,6 +4,8 @@ return {
         opts = {
             concurrency = 8,
             install_popular = true,
+            -- Do not use the `CC` environment variable as that may point to project specific cross-compilers.
+            compiler = 'cc',
             ensure_installed = {
                 'c',
                 'cpp',
