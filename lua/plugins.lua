@@ -326,7 +326,7 @@ return {
             { "gZc",    "<Plug>(nvim-surround-change-line)",     mode = "n", desc = "Change a surrounding pair, putting replacements on new lines" },
         },
         init = function()
-            vim.g.nvim_surround_no_normal_mappings = true
+            vim.g.nvim_surround_no_mappings = true
         end,
     },
     {
