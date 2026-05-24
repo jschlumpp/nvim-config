@@ -1,22 +1,7 @@
 return {
     'chriskempson/base16-vim',
     'EdenEast/nightfox.nvim',
-    {
-        'rainglow/vim',
-        name = 'rainglow',
-    },
-    {
-        'sonph/onehalf',
-        config = function(plugin)
-            vim.opt.rtp:append(plugin.dir .. "/vim")
-        end,
-    },
-    'rmehri01/onenord.nvim',
     'olimorris/onedarkpro.nvim',
-    'ray-x/aurora',
-    {
-        'folke/tokyonight.nvim',
-    },
     {
         'projekt0n/github-nvim-theme',
         opts = {},
