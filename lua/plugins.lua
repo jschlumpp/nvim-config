@@ -552,6 +552,14 @@ return {
                     Snacks.toggle.diagnostics({ name = 'diagnostics' }):map('<leader>td')
                     Snacks.toggle.treesitter({ name = 'treesitter' }):map('<leader>tT')
                     Snacks.toggle.inlay_hints({ name = 'inlay-hints' }):map('<leader>th')
+                    Snacks.toggle({
+                        id = "harper_ls_toggle",
+                        name = 'harper',
+                        get = function() return vim.lsp.is_enabled('harper_ls') end,
+                        set = function(state)
+                            vim.lsp.enable('harper_ls', state)
+                        end,
+                    }):map('<leader>tS')
                     Snacks.toggle.indent():map('<leader>ti')
                     Snacks.toggle.dim():map('<leader>tD')
                 end,
