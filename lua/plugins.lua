@@ -145,6 +145,10 @@ return {
         ft = 'rust',
     },
     {
+        "Olical/conjure",
+        ft = { "clojure", "fennel" },
+    },
+    {
         'Saecki/crates.nvim',
         event = { 'BufRead Cargo.toml' },
         dependencies = {
