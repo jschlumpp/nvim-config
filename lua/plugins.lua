@@ -1,3 +1,5 @@
+---@module 'lazy'
+---@type LazySpec
 return {
     'chriskempson/base16-vim',
     'EdenEast/nightfox.nvim',
