@@ -27,6 +27,7 @@ return {
             { "<leader>qp", "<cmd>colder<cr>", desc = "older-list" },
             { "<leader>qq", "<cmd>botright copen<cr>", desc = "open" },
             { "<leader>s", group = "search" },
+            { "<leader>m", group = "mode-specific" },
             { "<leader>t", group = "options" },
             { "<leader>tu", "<cmd>UndotreeToggle<cr>", desc = "undo-tree" },
             { "<leader>w", group = "windows" },
