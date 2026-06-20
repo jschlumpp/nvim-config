@@ -102,6 +102,7 @@ return {
     },
     {
         "mason-org/mason.nvim",
+        event = 'BufReadPre',
         cmd = {
             'Mason',
             'MasonUpdate',
@@ -115,6 +116,15 @@ return {
                 'github:mason-org/mason-registry',
                 'github:Crashdummyy/mason-registry',
             },
+        }
+    },
+    {
+        "mason-org/mason-lspconfig.nvim",
+        event = 'BufReadPre',
+        opts = {},
+        dependencies = {
+            "mason-org/mason.nvim",
+            "neovim/nvim-lspconfig",
         }
     },
     {
