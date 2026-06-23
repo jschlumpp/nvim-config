@@ -39,7 +39,7 @@ option('wildmenu', false)
 option('inccommand', 'split')
 option('list', true, window)
 option('mousemodel', 'extend')
-option('listchars', 'lead:·,tab:> ,nbsp:+,trail:-')
+option('listchars', 'lead:·,tab:> ,nbsp:+,trail:░')
 option('colorcolumn', '+1', window)
 vim.opt.formatoptions:remove { 't' }
 vim.opt.formatoptions:append { '/' }
