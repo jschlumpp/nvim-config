@@ -12,9 +12,6 @@ return {
         end,
     },
     {
-        'nyoom-engineering/oxocarbon.nvim'
-    },
-    {
         dependencies = { 'rktjmp/lush.nvim' },
         'metalelf0/jellybeans-nvim',
         lazy = false,
